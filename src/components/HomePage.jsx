@@ -23,7 +23,6 @@ const HomePage = () => {
                         </div>
 
                         <div className="products-table">
-                            Product table placeholder                            
                             <ProductsList />
                         </div>
                     </section>

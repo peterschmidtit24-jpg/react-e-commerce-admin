@@ -73,21 +73,21 @@ import './ProductsList.css'
 import ListItem from './ListItem'
 
 const ProductsList = () => {
-    // const [products, setProducts] = useState(productsData);
+    const [products, setProducts] = useState(productsData);
 
-    console.log("ProductsList component rendered");
-    let testCounter = 4
+    const deleteItem = (id) => {
+        const filteredProducts = products.filter(product => product.id !== id);
+        setProducts(filteredProducts);
+    }
 
     return (
         <>
         <div className="products-list">
 
-            {productsData.map((product, i) => (                
-                i < testCounter && (
-                    <div key={product.id}>
-                        <ListItem product={product} />
-                    </div>
-                )
+            {products.map((product, i) => (                
+                <div key={product.id}>
+                    <ListItem product={product} onDelete={deleteItem} />
+                </div>
             ))}
 
         </div>
