@@ -5,3 +5,54 @@ body {
   padding: 0;
   background-color: #141313;  
 }
+
+.admin-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7e6b2;
+}
+
+.admin-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+.admin-main {
+  min-width: 0;
+  padding: 14px;
+  background: #fffaf0;
+}
+
+.footer {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 24px;
+  color: #e6e1cd;
+  background: #6f4600;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .admin-body {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+}

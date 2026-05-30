@@ -66,27 +66,17 @@ Example fo a product json object:
 
 */
 
-import React from 'react'
-import { useState, useEffect } from 'react'
-import productsData from '../data/products.json'
 import './ProductsList.css'
 import ListItem from './ListItem'
 
-const ProductsList = () => {
-    const [products, setProducts] = useState(productsData);
-
-    const deleteItem = (id) => {
-        const filteredProducts = products.filter(product => product.id !== id);
-        setProducts(filteredProducts);
-    }
-
+const ProductsList = ({ products, onDeleteProduct }) => {
     return (
         <>
         <div className="products-list">
 
-            {products.map((product, i) => (                
+            {products.map((product) => (                
                 <div key={product.id}>
-                    <ListItem product={product} onDelete={deleteItem} />
+                    <ListItem product={product} onDelete={onDeleteProduct} />
                 </div>
             ))}
 

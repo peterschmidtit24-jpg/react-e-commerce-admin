@@ -1,14 +1,24 @@
-
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './ListItem.css'
 
 const ListItem = ({ product, onDelete }) => {
+    const navigate = useNavigate()
+
+    const handleDelete = (event) => {
+        event.stopPropagation()
+        onDelete(product.id)
+    }
+
+    const handleEdit = (event) => {
+        event.stopPropagation()
+    }
+
     /*
       Attributes: Image, Title, SKU, Stock, Price, Category, Actions
     */
 
     return (
-        <div className="list-item">
+        <div className="list-item" onClick={() => navigate(`/details/${product.id}`)}>
             <img src={product.images[0]} alt={product.title} />
             <h1>{product.title}</h1>
             <p>SKU: {product.sku}</p>
@@ -16,8 +26,8 @@ const ListItem = ({ product, onDelete }) => {
             <p>Price: ${product.price.toFixed(2)}</p>
             <p>Category: {product.category}</p>
             <div className="actions">
-                <button> ✏️ </button>
-                <button onClick={() => onDelete(product.id)}> 🗑️ </button>
+                <button onClick={handleEdit}> 🖋️ </button>
+                <button onClick={handleDelete}> 🗑️ </button>
             </div>
         </div>
     )

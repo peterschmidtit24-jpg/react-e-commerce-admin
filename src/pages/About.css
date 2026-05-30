@@ -1,0 +1,38 @@
+.about-page {
+  min-height: calc(100vh - 56px);
+  padding: 48px 24px;
+  background: #fffaf0;
+  color: #1f1b14;
+}
+
+.about-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px;
+  border-left: 6px solid #a66a00;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(31, 27, 20, 0.12);
+}
+
+.about-label {
+  margin: 0 0 10px;
+  color: #a66a00;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-panel h1 {
+  margin: 0 0 18px;
+  color: #141313;
+  font-size: 2.25rem;
+}
+
+.about-description {
+  margin: 0;
+  color: #4a4032;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
