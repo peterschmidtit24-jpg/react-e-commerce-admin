@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './ListItem.css'
 
-const ListItem = ({ product, onDelete }) => {
+const ListItem = ({ product, onDelete, onEdit }) => {
     const navigate = useNavigate()
 
     const handleDelete = (event) => {
@@ -11,10 +11,13 @@ const ListItem = ({ product, onDelete }) => {
 
     const handleEdit = (event) => {
         event.stopPropagation()
+        onEdit(product)
     }
 
     /*
       Attributes: Image, Title, SKU, Stock, Price, Category, Actions
+                <button onClick={handleEdit}>🖋️</button>
+                <button onClick={handleDelete}>🗑️</button>
     */
 
     return (
@@ -26,8 +29,8 @@ const ListItem = ({ product, onDelete }) => {
             <p>Price: ${product.price.toFixed(2)}</p>
             <p>Category: {product.category}</p>
             <div className="actions">
-                <button onClick={handleEdit}> 🖋️ </button>
-                <button onClick={handleDelete}> 🗑️ </button>
+                <button onClick={handleEdit}>🖋️</button>
+                <button onClick={handleDelete}>🗑️</button>
             </div>
         </div>
     )

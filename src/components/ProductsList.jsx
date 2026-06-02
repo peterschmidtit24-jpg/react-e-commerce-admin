@@ -69,14 +69,18 @@ Example fo a product json object:
 import './ProductsList.css'
 import ListItem from './ListItem'
 
-const ProductsList = ({ products, onDeleteProduct }) => {
+const ProductsList = ({ products, onDeleteProduct, onEditProduct }) => {
     return (
         <>
         <div className="products-list">
 
             {products.map((product) => (                
                 <div key={product.id}>
-                    <ListItem product={product} onDelete={onDeleteProduct} />
+                    <ListItem
+                        product={product}
+                        onDelete={onDeleteProduct}
+                        onEdit={onEditProduct}
+                    />
                 </div>
             ))}
 

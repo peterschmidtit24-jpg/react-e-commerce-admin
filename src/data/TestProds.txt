@@ -1,0 +1,16 @@
+Title: Urban Trail Backpack
+Brand: PackForge
+SKU: UTP-2026-BLK
+Category: accessories
+Price: 49.99
+Stock: 32
+Availability: In Stock
+Rating: 4.65
+Discount %: 12
+Minimum order: 1
+Image URL: https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png
+Tags: backpack, travel, accessories
+Description: A durable everyday backpack with padded laptop storage, water-resistant fabric, and organized interior compartments for commuting or short trips.
+Shipping: Ships in 3-5 business days
+Warranty: 2 year warranty
+Return policy: 30 days return policy
