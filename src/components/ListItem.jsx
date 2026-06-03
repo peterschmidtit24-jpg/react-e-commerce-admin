@@ -9,6 +9,9 @@ const ListItem = ({ product, onDelete, onEdit }) => {
         onDelete(product.id)
     }
 
+    // stopPropagation is used to prevent the click event from bubbling up to the parent div, 
+    // which would trigger the navigation to the details page. This way, when the edit button 
+    // is clicked, it only triggers the edit action without navigating away from the list.    
     const handleEdit = (event) => {
         event.stopPropagation()
         onEdit(product)

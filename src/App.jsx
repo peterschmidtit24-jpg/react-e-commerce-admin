@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import DashBoard from './pages/DashBoard'
 import Details from './pages/Details'
 import About from './pages/About'
+import Contact from './pages/Contact'
 import NotFoundPage from './pages/NotFoundPage'
 import productsData from './data/products.json'
 
@@ -57,7 +58,7 @@ function App() {
             />
             <Route path="/details/:productId" element={<Details products={products} />} />
             <Route path="/about" element={<About />} />
-            {/*<Route path="/contact" element={<Contact />} />*/}
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
